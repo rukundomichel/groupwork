@@ -2,6 +2,31 @@
 **Project Name:** EduGate (or School Intake Management System)
 **Objective:** A centralized platform where schools list their available courses and capacity, and students apply by manually inputting their academic history. The system streamlines the "Discovery to Application" pipeline.
 
+## Core Features
+
+- Course catalog with capacity and application deadlines
+- Student application submission with academic history input
+- Application tracking for both students and schools
+- Status updates from discovery through enrollment
+
+## Tech Stack
+
+- Backend: Node.js with Express
+- Frontend: React (planned)
+
+## Getting Started
+
+1. Install dependencies:
+
+## Next Steps
+
+- Add REST APIs for schools, courses, and applications
+- Implement student-facing React UI
+- Add authentication, authorization, and role-based access
+- Persist data with a database like MongoDB or PostgreSQL
+
+
+
 ## 2. Members
 * Gavin Boris
 * Rukundo Micheal
