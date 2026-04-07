@@ -1,7 +1,6 @@
-// controllers/admissionController.js
+
 import Admission from '../model/admissionModel.js';
 
-// CREATE
 export const createAdmission = async (req, res) => {
   try {
     const { student_id, program_id, admission_date } = req.body;
@@ -26,7 +25,6 @@ export const createAdmission = async (req, res) => {
   }
 };
 
-// READ ALL
 export const getAllAdmissions = async (req, res) => {
   try {
     const admissions = await Admission.findAll();
@@ -36,7 +34,6 @@ export const getAllAdmissions = async (req, res) => {
   }
 };
 
-// READ ONE
 export const getAdmissionById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -53,7 +50,6 @@ export const getAdmissionById = async (req, res) => {
   }
 };
 
-// DELETE
 export const deleteAdmission = async (req, res) => {
   try {
     const { id } = req.params;

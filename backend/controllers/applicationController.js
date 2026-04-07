@@ -1,7 +1,6 @@
-// controllers/applicationController.js
+
 import Application from '../model/Application';
 
-// CREATE
 export const createApplication = async (req, res) => {
   try {
     const { student_id, intake_id, program_id, status } = req.body;
@@ -27,7 +26,6 @@ export const createApplication = async (req, res) => {
   }
 };
 
-// READ ALL
 export const getAllApplications = async (req, res) => {
   try {
     const applications = await Application.findAll();
@@ -36,8 +34,6 @@ export const getAllApplications = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-// READ ONE
 export const getApplicationById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -54,7 +50,6 @@ export const getApplicationById = async (req, res) => {
   }
 };
 
-// UPDATE
 export const updateApplication = async (req, res) => {
   try {
     const { id } = req.params;
@@ -83,7 +78,6 @@ export const updateApplication = async (req, res) => {
   }
 };
 
-// DELETE
 export const deleteApplication = async (req, res) => {
   try {
     const { id } = req.params;
