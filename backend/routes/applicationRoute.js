@@ -1,11 +1,6 @@
-const express = require("express");
+import express from "express";
+import { getAllApplications, getApplicationById, updateApplication, deleteApplication } from "../controllers/applicationController";
 const router = express.Router();
-import {  createApplication, 
-    getAllApplications, 
-    getApplicationById, 
-    updateApplication, 
-    deleteApplication 
-} from '../controllers/applicationController';
 
 router.post("/create",  createApplication);
 router.get("/", getAllApplications);
