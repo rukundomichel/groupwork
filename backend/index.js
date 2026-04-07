@@ -3,7 +3,8 @@ import intakeroute from './routes/intakeRoute.js'
 import userroute from './routes/userRoute.js'
 import applicationRoutes from './routes/applicationRoute.js'
 import admissionRoutes from './routes/admissionRoute.js'
-// import programRoutes from './routes/programRoute.js'
+ import programRoutes from './routes/programRoute.js'
+ import studentRoute from './routes/studentRoute.js'
 
 import session from 'express-session'
 import cors from 'cors'
@@ -28,6 +29,7 @@ app.use('/admissions', admissionRoutes);
 app.use('/programs', programRoutes);
 app.use("/auth",userroute);
 app.use("/intake",intakeroute);
+app.use("/student",studentRoute);
 
 app.listen(2000,()=>{
     console.log("Listen to port 2000");
