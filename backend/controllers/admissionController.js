@@ -1,8 +1,8 @@
 // controllers/admissionController.js
-const Admission = require('../model/Admission');
+import Admission from '../model/admissionModel.js';
 
 // CREATE
-const createAdmission = async (req, res) => {
+export const createAdmission = async (req, res) => {
   try {
     const { student_id, program_id, admission_date } = req.body;
 
@@ -27,7 +27,7 @@ const createAdmission = async (req, res) => {
 };
 
 // READ ALL
-const getAllAdmissions = async (req, res) => {
+export const getAllAdmissions = async (req, res) => {
   try {
     const admissions = await Admission.findAll();
     res.status(200).json(admissions);
@@ -37,7 +37,7 @@ const getAllAdmissions = async (req, res) => {
 };
 
 // READ ONE
-const getAdmissionById = async (req, res) => {
+export const getAdmissionById = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -54,7 +54,7 @@ const getAdmissionById = async (req, res) => {
 };
 
 // DELETE
-const deleteAdmission = async (req, res) => {
+export const deleteAdmission = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -73,11 +73,4 @@ const deleteAdmission = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
-};
-
-module.exports = {
-  createAdmission,
-  getAllAdmissions,
-  getAdmissionById,
-  deleteAdmission
 };

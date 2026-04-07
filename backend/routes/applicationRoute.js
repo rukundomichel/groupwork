@@ -1,10 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/applicationController");
+import {  createApplication, 
+    getAllApplications, 
+    getApplicationById, 
+    updateApplication, 
+    deleteApplication 
+} from '../controllers/applicationController';
 
-router.post("/", controller.create);
-router.get("/", controller.getAll);
-router.put("/:id", controller.update);
-router.delete("/:id", controller.delete);
+router.post("/create",  createApplication);
+router.get("/", getAllApplications);
+router.get("/:id", getApplicationById);
+router.put("/:id", updateApplication);
+router.delete("/:id", deleteApplication);
 
 module.exports = router;

@@ -1,9 +1,9 @@
 import express from 'express'
 import intakeroute from './routes/intakeRoute.js'
 import userroute from './routes/userRoute.js'
-import applicationRoutes from './routes/applicationRoutes.js'
-import admissionRoutes from './routes/admissionRoutes.js'
-import programRoutes from './routes/programRoutes.js'
+import applicationRoutes from './routes/applicationRoute.js'
+import admissionRoutes from './routes/admissionRoute.js'
+// import programRoutes from './routes/programRoute.js'
 
 import session from 'express-session'
 import cors from 'cors'

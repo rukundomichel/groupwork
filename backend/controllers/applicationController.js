@@ -1,8 +1,8 @@
 // controllers/applicationController.js
-const Application = require('../model/Application');
+import Application from '../model/Application';
 
 // CREATE
-const createApplication = async (req, res) => {
+export const createApplication = async (req, res) => {
   try {
     const { student_id, intake_id, program_id, status } = req.body;
 
@@ -28,7 +28,7 @@ const createApplication = async (req, res) => {
 };
 
 // READ ALL
-const getAllApplications = async (req, res) => {
+export const getAllApplications = async (req, res) => {
   try {
     const applications = await Application.findAll();
     res.status(200).json(applications);
@@ -38,7 +38,7 @@ const getAllApplications = async (req, res) => {
 };
 
 // READ ONE
-const getApplicationById = async (req, res) => {
+export const getApplicationById = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -55,7 +55,7 @@ const getApplicationById = async (req, res) => {
 };
 
 // UPDATE
-const updateApplication = async (req, res) => {
+export const updateApplication = async (req, res) => {
   try {
     const { id } = req.params;
     const { student_id, intake_id, program_id, status } = req.body;
@@ -84,7 +84,7 @@ const updateApplication = async (req, res) => {
 };
 
 // DELETE
-const deleteApplication = async (req, res) => {
+export const deleteApplication = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -103,12 +103,4 @@ const deleteApplication = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
-};
-
-module.exports = {
-  createApplication,
-  getAllApplications,
-  getApplicationById,
-  updateApplication,
-  deleteApplication
 };

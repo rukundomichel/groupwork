@@ -1,9 +1,10 @@
-const express = require("express");
+import express from 'express'
+import { createAdmission, getAllAdmissions, getAdmissionById, deleteAdmission } from '../controllers/admissionController.js'
 const router = express.Router();
-const controller = require("../controllers/admissionController");
 
-router.post("/", controller.create);
-router.get("/", controller.getAll);
-router.delete("/:id", controller.delete);
+router.post("/", createAdmission);
+router.get("/", getAllAdmissions);
+router.get("/:id", getAdmissionById);
+router.delete("/:id", deleteAdmission);
 
-module.exports = router;
+export default router;
