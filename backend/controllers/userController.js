@@ -1,4 +1,4 @@
-import User from "../../frontend/src/components/model/userModel.js";
+import User from "../model/userModel.js";
 import bcrypt from 'bcrypt'
 
 export async function registerUser(req, res) {

@@ -1,5 +1,5 @@
 // controllers/applicationController.js
-const Application = require('../../frontend/src/components/model/Application');
+const Application = require('../model/Application');
 
 // CREATE
 const createApplication = async (req, res) => {

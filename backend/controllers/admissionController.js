@@ -1,5 +1,5 @@
 // controllers/admissionController.js
-const Admission = require('../../frontend/src/components/model/Admission');
+const Admission = require('../model/Admission');
 
 // CREATE
 const createAdmission = async (req, res) => {
