@@ -1,4 +1,4 @@
-import Intake from "../model/intakesModel.js";
+import Intake from "../../frontend/src/components/model/intakesModel.js";
 
 export async function registerIntake(req,res){
     try {
